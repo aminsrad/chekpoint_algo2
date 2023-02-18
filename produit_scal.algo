@@ -1,0 +1,54 @@
+//****************** en cas d'utilisation d'une procedure****************//
+// PROCEDURE dot_product(v1 ARRAY_OF FLOAT[] ,v2 ARRAY_OF FLOAT[], ps:=0 FLOAT)
+// VAR
+//     i:=0 INTEGER
+//     BEGIN
+//     FOR i FROM 0 TO v1.length STEP 1  DO
+//         ps:=ps+(v1[i]*v2[i])
+//     END_FOR
+// END
+
+//****************** en cas d'utilisation d'une fonction****************//
+
+
+// FUNCTION dot_product(v1 ARRAY_OF FLOAT[],v2 ARRAY_OF FLOAT[]) : FLOAT
+
+// VAR
+//     i:=0 INTEGER
+//     ps:=0 FLOAT
+//     BEGIN
+//     FOR i FROM 0 TO v1.length STEP 1  DO
+//         ps:=ps+(v1[i]*v2[i])
+//     END_FOR
+//     RETURN ps;
+// END
+
+
+ALGORITHM scalaire
+VAR
+i:=0 INTEGER
+j:=0 INTEGER
+v1:=ARRAY_OF FLOAT[5]
+v2:=ARRAY_OF FLOAT[5]
+p FLOAT
+BEGIN
+    write('fill V1:')
+        FOR i FROM 0 TO 4 DO
+            v1[i]=read(v1[i])
+        END_FOR
+
+    write('fill V2:0')
+        FOR j FROM 0 TO 4   DO 
+            v2[j]=read(v2[j])
+        END_FOR 
+    // dot_product(v1,v2,p)  en cas de procedure
+    // p=dot_product(v1,v2) en cas de fonction
+    write('le produit scalaire des deux vecteurs egale:' + p)
+    IF (p=0) THEN
+        write('les deux vecteurs sont orthogonaux')
+    else
+        write('les deux vecteurs ne sont pas orthogonaux')
+    END_IF
+
+
+END

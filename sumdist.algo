@@ -1,0 +1,51 @@
+ALGORITHM sumdist
+VAR
+set1 := ARRAY_OF INTEGER[5];
+set2 := ARRAY_OF integer[5];
+sum:=INTEGER
+i:=0 INTEGER
+j:=0 INTEGER
+e:=0 INTEGER
+f:=0 INTEGER
+aux:= false BOOLEAN
+
+BEGIN
+write('fill set1:')
+    FOR i FROM 0 TO 4 DO
+        set[i]=read(set[i])
+    END_FOR
+
+write('fill set2:')
+    FOR j FROM 0 TO 4   DO 
+        set[j]=read(set[j])
+    END_FOR 
+
+
+FOR e FROM 0 TO 4  DO
+    aux:=false
+    FOR f FROM 0 TO 4   DO
+        IF (set1[e]=set2[f])
+            aux:=true
+    END_FOR
+    if (aux==true) THEN
+        sum:=sum
+    else
+        sum:=sum+set1[e]
+END_FOR
+
+aux:=false
+
+FOR e FROM 0 TO 4  DO
+    aux:=false
+    FOR f FROM 0 TO 4   DO
+        IF (set2[e]=set1[f])
+            aux:=true
+    END_FOR
+    if (aux==true) THEN
+        sum:=sum
+    else
+        sum:=sum+set2[e]
+END_FOR
+
+
+END
